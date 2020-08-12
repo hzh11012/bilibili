@@ -1,0 +1,95 @@
+/* 全局样式表 */
+html {
+    height: 100%;
+    background: none;
+    min-width: 0;
+}
+body{
+    min-width: 0;
+    min-height: 100%;
+    position: relative;
+    background-color: #fff;
+    font: 12px -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased; /* 字体抗锯齿 */
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* 去除a标签在移动端点击时的高亮 */
+    margin: 0;
+    padding: 0;
+}
+ol,ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #fff;
+ }
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+input,select{
+    outline: none;
+}
+.el-select .el-input {
+    width: 130px;
+  }
+.input-with-select .el-input-group__prepend {
+    background-color: #fff;
+}
+.el-select-dropdown {
+    width: 130px;
+}
+.el-button--primary {
+    color: #fff !important;
+    background-color: #00a1d6 !important;
+    border-color: #00a1d6 !important;
+}
+.el-checkbox__label,.el-checkbox__input{
+    display: flex !important;
+    align-items: center !important;
+    font-size: 12px !important;
+    color: #717171 !important;
+}
+.el-checkbox__label{
+    line-height: normal !important;
+    padding-left: 8px !important;
+}
+.el-checkbox{
+    display: flex !important;
+    align-items: center !important;
+}
+.el-error .el-input__inner {
+    border-color: #f66495;
+}
+.el-carousel__indicators{
+    left:initial!important;
+    transform:initial!important;
+    right: 12px;
+}
+.el-carousel__indicator{
+    padding: 12px 5px !important;
+}
+.el-carousel__button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    opacity: 1 !important;
+}
+.is-active button{
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url(//s1.hdslb.com/bfs/static/jinkela/international-home/asserts/icon_slide_selected.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.8);
+}
