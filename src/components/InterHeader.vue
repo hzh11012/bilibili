@@ -7,6 +7,12 @@
         <a href="/" class="head-logo">
           <img class="logo-img" :src="navBw[142][0].litpic" />
         </a>
+        <a
+          v-if="navBw[142][0].name!=''"
+          href="/"
+          class="head-title"
+          target="_blank"
+        >{{navBw[142][0].name}}</a>
       </div>
     </div>
     <div v-if="banner" class="b-wrap">
@@ -57,6 +63,7 @@ export default {
 <style lang="less" scoped>
 .interHeader {
   position: relative;
+  z-index: 5;
 }
 .nav-banner {
   position: relative;
@@ -71,6 +78,14 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
+  &:hover {
+    cursor: pointer;
+    .b-logo {
+      .head-title {
+        opacity: 1;
+      }
+    }
+  }
   .taper-line {
     pointer-events: none;
     position: absolute;
@@ -93,6 +108,20 @@ export default {
       .logo-img {
         height: 100%;
       }
+    }
+    .head-title {
+      position: absolute;
+      bottom: 25px;
+      left: 280px;
+      padding: 6px 10px;
+      background-color: rgba(0, 0, 0, 0.68);
+      opacity: 0;
+      max-width: 350px;
+      font-size: 14px;
+      border-radius: 4px;
+      color: white;
+      line-height: 20px;
+      transition: all 0.2s;
     }
   }
 }

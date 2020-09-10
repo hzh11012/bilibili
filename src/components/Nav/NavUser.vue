@@ -1,7 +1,7 @@
 <template>
   <div class="nav-user-center">
-    <div class="user-con search-icon">
-      <a href="/" target="_blank">
+    <div class="user-con search-icon" v-if="!hideSearch">
+      <a href="#/search" target="_blank">
         <svg class="icon icon-search" aria-hidden="true">
           <use xlink:href="#icon-search" />
         </svg>
@@ -57,6 +57,7 @@ import favoritePop from "../Popover/Favorites.vue";
 import historyPop from "../Popover/History.vue";
 import uploadPop from "../Popover/Upload.vue";
 export default {
+  props:['hideSearch'],
   data() {
     return {};
   },

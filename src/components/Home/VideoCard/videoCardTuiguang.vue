@@ -1,7 +1,7 @@
 <template>
   <div class="video-card-common">
     <div class="card-pic">
-      <a href="/" target="_blank">
+      <a :href="'#/video?id='+item.archive.bvid" target="_blank">
         <img :src="item.pic+'@412w_232h_1c_100q.jpeg'" width="206" height="116" />
         <div class="count">
           <div class="left"></div>

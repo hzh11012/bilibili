@@ -519,6 +519,10 @@ export default {
   /deep/ .icon {
     color: #00a1d6;
   }
+  /deep/ .search-input {
+    background: #f4f4f4;
+    border: 1px solid #e7e7e7;
+  }
 }
 .top-banner {
   background: #00a0d8;
@@ -820,6 +824,7 @@ a {
   text-align: center;
   line-height: 16px;
 }
+
 .bottom-filling {
   &::after {
     height: 278px;

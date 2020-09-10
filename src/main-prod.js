@@ -32,11 +32,9 @@ Vue.prototype.$encryptedData = function (publicKey, data) {
 }
 
 import axios from 'axios'
-import './plugins/element.js'
+// import './plugins/element.js'
 Vue.prototype.$http = axios
 
-import { get } from "./assets/js/api.js";
-Vue.prototype.get = get;
 new Vue({
   router,
   store,

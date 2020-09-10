@@ -1,5 +1,5 @@
 <template>
-  <div class="home bottom-filling" id='homeTop'>
+  <div class="home bottom-filling" id="homeTop">
     <inter-header :banner="true"></inter-header>
     <first-screen></first-screen>
     <storey-box></storey-box>

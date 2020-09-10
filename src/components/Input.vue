@@ -6,7 +6,7 @@
       :maxlength="maxlength"
       :autocomplete="autocomplete"
       :value="value"
-      @input="$emit('getInputValue',$event.target.value)"
+      @input="$emit('getInputValue', $event.target.value)"
       :class="showError?'error':''"
     />
   </div>

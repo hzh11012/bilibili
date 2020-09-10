@@ -14,13 +14,13 @@
         <span class="number on">1</span>
         <div class="preview">
           <div class="pic">
-            <a href="/" target="_blank" class="link">
+            <a :href="'#/video?id='+list[0].bvid" target="_blank" class="link">
               <img :src="list[0].pic+'@112w_63h_1c_100q.webp'" :alt="list[0].title" />
             </a>
             <watch-later></watch-later>
           </div>
           <div class="txt">
-            <a href="/" target="_blank" class="link">
+            <a :href="'#/video?id='+list[0].bvid" target="_blank" class="link">
               <p :title="list[0].title">{{list[0].title}}</p>
             </a>
             <span>综合得分：{{list[0].pts | setNum}}</span>
@@ -70,7 +70,7 @@
       </div>
       <div class="rank-wrap" v-for="(item,index) in list.slice(1,10)" :key="index">
         <span class="number" :class="index<2?'on':''">{{index+2}}</span>
-        <a href="/" target="_blank" class="link">
+        <a :href="'#/video?id='+item.bvid" target="_blank" class="link">
           <p class="title" :title="item.title">{{item.title}}</p>
         </a>
         <div class="popover-video-card pvc">

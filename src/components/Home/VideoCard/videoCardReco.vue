@@ -1,7 +1,7 @@
 <template>
   <div class="video-card-reco">
     <div class="info-box">
-      <a href="/" target="_blank">
+      <a :href="'#/video?id='+item.bvid" target="_blank">
         <img :src="item.pic +'@412w_232h_1c_100q.jpg'" :alt="item.title" />
         <div class="info">
           <p class="title" :title="item.title">{{item.title}}</p>

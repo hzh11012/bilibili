@@ -14,14 +14,40 @@ let setTime = function (val) {
     if (sec < 10) {
         sec = "0" + sec;
     }
-    if (hou!=0) {
+    if (hou != 0) {
         val = `${hou}:${min}:${sec}`;
-    }else{
+    } else {
         val = `${min}:${sec}`;
     }
     return val;
 }
 export { setTime }
+//视频时间过滤器 。将 mm:ss(不合理格式) 转化成 hh:mm:ss/mm:ss 格式
+let setTime1 = function (val) {
+    const index = val.indexOf(":");
+    val = val.slice(0, index) * 60 + val.slice(index + 1) * 1;
+    if (!val) return "00:00";
+
+    let hou = parseInt(val / 3600);
+    if (hou < 10) {
+        hou = '0' + hou;
+    }
+    let min = parseInt(val % 3600 / 60);
+    if (min < 10) {
+        min = "0" + min;
+    }
+    let sec = parseInt(val % 3600 % 60);
+    if (sec < 10) {
+        sec = "0" + sec;
+    }
+    if (hou != 0) {
+        val = `${hou}:${min}:${sec}`;
+    } else {
+        val = `${min}:${sec}`;
+    }
+    return val;
+}
+export { setTime1 }
 
 let compareDate = (timestamp, day = 0) => {
     // timestamp 为要传入的时间戳
@@ -35,7 +61,6 @@ let compareDate = (timestamp, day = 0) => {
     // 这里返回 比较后的值，比较成功，则返回`true`，失败则返回`false`
     return (newDate(timestamp).getDate() == newDate().getDate() - day) && (newDate(timestamp).getMonth() == newDate().getMonth()) && (newDate(timestamp).getYear() == newDate().getYear())
 }
-
 export { compareDate }
 
 

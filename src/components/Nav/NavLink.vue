@@ -16,7 +16,7 @@
       <li class="nav-link-item" v-for="(item,index) in navList" :key="index">
         <a :href="item.link" target="_blank" class="link">{{item.name}}</a>
       </li>
-      <li class="nav-link-item" v-if="bw[2954] != null">
+      <!-- <li class="nav-link-item" v-if="bw[2954] != null">
         {{bw}}
         <a href="/" target="_blank" class="link loc-moveclip">
           <div class="loc-mc-box">
@@ -25,14 +25,7 @@
             <p class="bnj-txt bnj-down">{{bw[2954][0].name}}</p>
           </div>
         </a>
-      </li>
-      <!-- <li class="nav-link-item">
-        <a href="/" target="_blank" class="link">
-          <svg class="icon icon-navbar_phone" aria-hidden="true">
-            <use xlink:href="#icon-navbar_phone" />
-          </svg>下载APP
-        </a>
-      </li>-->
+      </li> -->
       <download-pop></download-pop>
     </ul>
   </div>

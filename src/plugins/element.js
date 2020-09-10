@@ -2,7 +2,7 @@ import Vue from 'vue'
 import {
     Input, Select, Option, Button,
     Checkbox, Popover, InfiniteScroll, 
-    Carousel, CarouselItem, Tooltip
+    Carousel, CarouselItem, Tooltip, Pagination
 } from 'element-ui'
 
 Vue.use(Input)
@@ -15,4 +15,5 @@ Vue.use(InfiniteScroll)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Tooltip)
+Vue.use(Pagination)
 

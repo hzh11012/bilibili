@@ -1,7 +1,7 @@
 <template>
   <div class="video-card-common1">
     <div class="card-pic">
-      <a href="/" target="_blank">
+      <a :href="'#/video?id='+item.bvid" target="_blank">
         <img :src="item.pic+'@412w_232h_1c_100q.jpeg'" width="206" height="116" />
         <div class="count">
           <div class="left">
@@ -26,7 +26,7 @@
       </a>
       <watch-later></watch-later>
     </div>
-    <a href="/" target class="ex-title">{{item.title}}</a>
+    <a :href="'#/video?id='+item.bvid" target="_blank" class="ex-title">{{item.title}}</a>
     <a href="/" target="_blank" class="ex-up" v-if="showUp">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-up" />

@@ -2,7 +2,8 @@
   <div class="nav-header-box">
     <div class="nav-header">
       <nav-link :bw="bw" :miniIcon="miniIcon"></nav-link>
-      <nav-user></nav-user>
+      <nav-search v-if="!hideSearch"></nav-search>
+      <nav-user :hideSearch='hideSearch'></nav-user>
     </div>
   </div>
 </template>
@@ -10,11 +11,13 @@
 <script>
 import navLink from "./NavLink.vue";
 import navUser from "./NavUser.vue";
+import navSearch from "./NavSearch.vue";
 export default {
-  props: ["bw", "miniIcon"],
+  props: ["bw", "miniIcon", "hideSearch"],
   components: {
     navLink,
     navUser,
+    navSearch,
   },
 };
 </script>
